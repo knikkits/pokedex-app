@@ -43,11 +43,12 @@ const App = () => {
             placeholder = 'Enter Pokemon Name'
           />
         </label>
-      </form>  
+      </form>
+    
       {pokemonData.map((data) => {
         return(
           <div className = 'container'>
-            
+                              
             <div className = 'divTable'>
               <div className = 'divTableBody'>
 
@@ -55,48 +56,58 @@ const App = () => {
 
                 <div className = 'pokemonName'>{data.name}</div>
 
-                <div className = 'divTableRow'>
-                  <div className = 'divTableCell'>Type</div>
-                  <div className = 'divTableCell'>{pokemonType}</div>
-                </div>
+                <div className = 'divTableDetails'>
+                  <div className = 'handle'>
 
-                <div className = 'divTableRow'>
-                  <div className = 'divTableCell'>Height</div>
-                  <div className = 'divTableCell'>
-                    {''}
-                    {Math.round(data.height * 3.9)}
-                  </div>
-                </div>
+                    <div className = 'divTableRow'>
+                      <div className = 'divTableCell'>Type</div>
+                      <div className = 'divTableCell'>{pokemonType}</div>
+                    </div>
 
-                <div className = 'divTableRow'>
-                  <div className = 'divTableCell'>Weight</div>
-                  <div className = 'divTableCell'>
-                    {''}
-                    {Math.round(data.weight / 4.3)} lbs
-                  </div>
-                </div>
+                    <div className = 'divTableRow'>
+                      <div className = 'divTableCell'>Height</div>
+                      <div className = 'divTableCell'>
+                        {''}
+                        {Math.round(data.height * 3.9) + '"'}
+                      </div>
+                    </div>
 
-                <div className = 'divTableRow'>
-                  <div className = 'divTableCell'>Abilities</div>
-                  <div className = 'divTableCell'>
-                    {''}
-                    {data.abilities[0].ability.name} <br></br>     
-                    {data.abilities[1].ability.name}               
-                  </div>
-                </div>
+                    <div className = 'divTableRow'>
+                      <div className = 'divTableCell'>Weight</div>
+                      <div className = 'divTableCell'>
+                        {''}
+                        {Math.round(data.weight / 4.3)} lbs
+                      </div>
+                    </div>
 
-                {/* <div className = 'divTableRow'>
-                  <div className = 'divTableCell'>Base Stats</div>
-                  <div className = 'divTableCell'>
-                    {''}
-                    hp {data.stats[0].base_stat} <br></br>
-                    attack {data.stats[1].base_stat} <br></br>
-                    defense {data.stats[2].base_stat} <br></br>
-                    special attack {data.stats[3].base_stat} <br></br>
-                    special defence{data.stats[4].base_stat} <br></br>
-                    speed {data.stats[5].base_stat}
+                    <div className = 'divTableRow'>
+                      <div className = 'divTableCell'>Abilities</div>
+                      <div className = 'divTableCell'>
+                        {''}
+                        {data.abilities[0].ability.name} <br></br>     
+                        {data.abilities[1].ability.name}               
+                      </div>
+                    </div>
                   </div>
-                </div> */}
+
+                  <div className = 'handle'>
+
+                    <div className = 'divTableRow'>
+                      <div className = 'divTableCell'></div>
+                      <div className = 'divTableCell'>
+                        {''}
+                        <i className="fa-solid fa-circle-dot"></i>hp: {data.stats[0].base_stat} <br></br>
+                        <i className="fa-solid fa-circle-dot"></i>attack: {data.stats[1].base_stat} <br></br>
+                        <i className="fa-solid fa-circle-dot"></i>defense: {data.stats[2].base_stat} <br></br>
+                        <i className="fa-solid fa-circle-dot"></i>special attack: {data.stats[3].base_stat} <br></br>
+                        <i className="fa-solid fa-circle-dot"></i>special defence:{data.stats[4].base_stat} <br></br>
+                        <i className="fa-solid fa-circle-dot"></i>speed: {data.stats[5].base_stat}
+                      </div>
+                    </div>
+
+                    </div>
+
+                </div>
 
               </div>
             </div>
