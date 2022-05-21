@@ -2,8 +2,9 @@
   text-align: center;
 }
 
-.body {
-  background-image: url('./imgs/cardback.jpg');
+body {
+  background-image: url("https://source.unsplash.com/1fZC2rYbpsU");
+  background-size: 100%;
 }
 
 input {
@@ -13,6 +14,9 @@ input {
   display: block;
   margin: 30px auto;
   width: 400px;
+  margin-top: 80px;
+  border: 5px solid gold;
+  border-radius: 15px;
 }
 
 .cardDefault {

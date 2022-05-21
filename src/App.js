@@ -1,7 +1,6 @@
 
 import './App.css';
 import axios from 'axios';
-import { useEffect } from 'react';
 import React, {useState} from 'react';
 
 const App = () => {
@@ -40,7 +39,7 @@ const App = () => {
           <input
             type ='text'
             onChange = {handleChange}
-            placeholder = 'Enter Pokemon Name'
+            placeholder = 'Enter A Pokemon Name'
           />
         </label>
       </form>
@@ -52,7 +51,7 @@ const App = () => {
             <div className = 'divTable'>
               <div className = 'divTableBody'>
 
-              <img src = {data.sprites['front_default']} alt = 'pokemon image'/> 
+              <img src = {data.sprites['front_default']} alt = 'pokemon'/> 
 
                 <div className = 'pokemonName'>{data.name}</div>
 
